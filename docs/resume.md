@@ -28,8 +28,8 @@ NJIT - Ying Wu College of Computing (Sep 2023 - May 2027)
    Priti Musical
     Sound Engineer
     May 2024 – Present
-    - Communicated directly with clients and performers to confirm sound quality and event satisfaction. 
-    - Set up and operated audio consoles and equipment for live performances. (Specifically the dLive S7000, SQ-7, and ZED-16FX) 
+    - Communicated directly with clients and performers to confirm sound quality and event satisfaction
+    - Set up and operated audio consoles and equipment for live performances. (Specifically the dLive S7000, SQ-7, and ZED-16FX)
     - Interpreted and executed band riders to ensure technical and artistic requirements were met.
     - Troubleshot technical issues quickly under pressure to minimize disruptions during shows.
     - Collaborated with stage crews and performers to coordinate smooth event operations.
