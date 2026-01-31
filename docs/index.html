@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mihir Kandlur | Portfolio</title>
   <meta name="description" content="Personal site for resume, projects, and contact." />
+
   <style>
     :root {
       --bg: #0b0f19;
@@ -14,7 +15,9 @@
       --accent: #7aa2ff;
       --border: rgba(255,255,255,0.10);
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -22,29 +25,28 @@
                   radial-gradient(900px 500px at 80% 0%, rgba(122,255,210,0.10), transparent 55%),
                   var(--bg);
       color: var(--text);
-      line-height: 1.5;
     }
+
     .wrap {
       max-width: 900px;
       margin: 0 auto;
       padding: 48px 20px;
     }
+
     header {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
+
     h1 {
       margin: 0;
       font-size: clamp(28px, 4vw, 40px);
-      letter-spacing: -0.02em;
     }
+
     .tagline {
-      margin: 0;
+      margin: 6px 0 0;
       color: var(--muted);
-      font-size: 16px;
     }
+
     .card {
       border: 1px solid var(--border);
       background: rgba(18, 26, 43, 0.75);
@@ -52,50 +54,58 @@
       border-radius: 16px;
       padding: 18px;
     }
+
     nav {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-      margin: 18px 0 24px;
+      gap: 14px;
+      margin-bottom: 24px;
     }
-    a.tile {
+
+    /* IMAGE TILE */
+    .tile {
+      position: relative;
       display: block;
-      text-decoration: none;
-      color: var(--text);
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-      padding: 14px 14px;
       border-radius: 14px;
-      transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: transform 0.15s ease, border-color 0.15s ease;
     }
-    a.tile:hover {
-      transform: translateY(-2px);
+
+    .tile:hover {
+      transform: translateY(-3px);
       border-color: rgba(122,162,255,0.5);
-      background: rgba(122,162,255,0.08);
     }
-    .tile .label {
-      font-weight: 650;
-      margin-bottom: 4px;
+
+    .tile img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.75);
     }
-    .tile .sub {
-      color: var(--muted);
-      font-size: 13px;
-      margin: 0;
+
+    .tile-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
+      font-weight: 600;
     }
+
     .grid {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       gap: 14px;
     }
+
     @media (max-width: 800px) {
       .grid { grid-template-columns: 1fr; }
     }
-    footer {
-      margin-top: 26px;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-    }
+
     .pill {
       display: inline-block;
       padding: 6px 10px;
@@ -104,10 +114,16 @@
       background: rgba(255,255,255,0.03);
       color: var(--muted);
       font-size: 12px;
-      margin-right: 8px;
-      margin-top: 8px;
+      margin-right: 6px;
+      margin-top: 6px;
     }
-    .muted { color: var(--muted); }
+
+    footer {
+      margin-top: 26px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
   </style>
 </head>
 
@@ -115,50 +131,49 @@
   <div class="wrap">
     <header>
       <h1>Mihir</h1>
-      <p class="tagline">Short tagline — e.g., CS student • AI projects • Sound engineering</p>
+      <p class="tagline">CS student • AI projects • Sound engineering</p>
     </header>
 
     <section class="card">
-      <nav aria-label="Primary">
-        <!-- Leave href="" blank for now; fill later -->
+      <nav>
+        <!-- Replace image src with screenshots later -->
         <a class="tile" href="">
-          <div class="label">Resume</div>
-          <a href="url">https://vijkan.github.io/Website/resume</a>
+          <img src="images/resume.png" alt="Resume preview">
+          <div class="tile-label">Resume</div>
         </a>
 
         <a class="tile" href="">
-          <div class="label">Projects</div>
-          <p class="sub"></p>
+          <img src="images/projects.png" alt="Projects preview">
+          <div class="tile-label">Projects</div>
         </a>
 
         <a class="tile" href="">
-          <div class="label">About</div>
-          <p class="sub">Quick bio + skills</p>
+          <img src="images/about.png" alt="About preview">
+          <div class="tile-label">About</div>
         </a>
 
         <a class="tile" href="">
-          <div class="label">Contact</div>
-          <p class="sub">Kandlurmihir@gmail.com</p>
+          <img src="images/contact.png" alt="Contact preview">
+          <div class="tile-label">Contact</div>
         </a>
 
-        <a class="tile" href="">
-          <div class="label">GitHub</div>
-          <a href="url">https://github.com/Vijkan</a>
+        <a class="tile" href="https://github.com/Vijkan">
+          <img src="images/github.png" alt="GitHub preview">
+          <div class="tile-label">GitHub</div>
         </a>
 
-        <a class="tile" href="">
-          <div class="label">LinkedIn</div>
-          <a href="url">https://www.linkedin.com/in/mihir-kandlur/</a>
+        <a class="tile" href="https://www.linkedin.com/in/mihir-kandlur/">
+          <img src="images/linkedin.png" alt="LinkedIn preview">
+          <div class="tile-label">LinkedIn</div>
         </a>
       </nav>
 
       <div class="grid">
         <div class="card" style="background: rgba(255,255,255,0.02);">
-          <h2 style="margin: 0 0 8px; font-size: 18px;">Welcome</h2>
-          <p class="muted" style="margin: 0;">
-            Add a short intro here. Example: what you’re studying, what you build, and what you’re looking for.
+          <h2>Welcome</h2>
+          <p style="color: var(--muted);">
+            Add a short intro here. What you study, what you build, and what you're aiming for.
           </p>
-
           <div>
             <span class="pill">C++</span>
             <span class="pill">Java</span>
@@ -168,18 +183,18 @@
         </div>
 
         <div class="card" style="background: rgba(255,255,255,0.02);">
-          <h2 style="margin: 0 0 8px; font-size: 18px;">Highlights</h2>
-          <ul style="margin: 0; padding-left: 18px; color: var(--muted);">
-            <li>Project #1 — one-line description</li>
-            <li>Project #2 — one-line description</li>
-            <li>Project #3 — one-line description</li>
+          <h2>Highlights</h2>
+          <ul style="color: var(--muted); padding-left: 18px;">
+            <li>Quake 4 engine modding</li>
+            <li>Local AI / LLM systems</li>
+            <li>Audio engineering & live systems</li>
           </ul>
         </div>
       </div>
     </section>
 
     <footer>
-      © <span id="year"></span> Your Name • Built with GitHub Pages
+      © <span id="year"></span> Mihir Kandlur • GitHub Pages
     </footer>
   </div>
 
