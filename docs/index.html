@@ -12,7 +12,7 @@
       --card: #121a2b;
       --text: #e2d8d8;
       --muted: #617092;
-      --accent: #7aa2ff;
+      --accent: #c05415cf; /*this is what changes the text in thje boxes*/
       --border: rgba(255, 255, 255, 0.092);
     }
 
@@ -87,6 +87,8 @@
     }
 
     .tile-label {
+      /* //Here */
+      color: var(--accent);
       position: absolute;
       inset: 0;
       display: flex;
@@ -137,7 +139,7 @@
     <section class="card">
       <nav>
         <!-- Replace image src with screenshots later -->
-        <a class="tile" href="">
+        <a class="tile" href="https://vijkan.github.io/Website/resume">
           <img src="images/resume.png" alt="Resume preview">
           <div class="tile-label">Resume</div>
         </a>
@@ -163,7 +165,7 @@
         </a>
 
         <a class="tile" href="https://www.linkedin.com/in/mihir-kandlur/">
-          <img src="images/linkedin.png" alt="LinkedIn preview">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyxt5q7brBCDrZR3kRQJoDDiymyaXF16PDFA&s" alt="LinkedIn preview">
           <div class="tile-label">LinkedIn</div>
         </a>
       </nav>
@@ -172,13 +174,15 @@
         <div class="card" style="background: rgba(88, 82, 82, 0.089);">
           <h2>Welcome</h2>
           <p style="color: var(--muted);">
-            Add a short intro here. What you study, what you build, and what you're aiming for.
+          I am a Information Technology major at NJIT and am currently focusing in game development. I am workin on a few intreasting projects including integrating LLM's into games and a group project focusing on a 3d tower defense game. I am aiming to work for a game developer focusing on strategy or story based games.
+            
           </p>
           <div>
             <span class="pill">C++</span>
             <span class="pill">Java</span>
             <span class="pill">Python</span>
-            <span class="pill">AI/ML</span>
+            <span class="pill">Unity</span>
+            <span class="pill">Unreal Engine</span>
           </div>
         </div>
 
@@ -187,7 +191,7 @@
           <ul style="color: var(--muted); padding-left: 18px;">
             <li>Game Modification and Development</li>
             <li>Local AI / LLM systems</li>
-            <li>Audio engineering & live systems</li>
+            <li>National Cyber Scholars 2023</li>
           </ul>
         </div>
       </div>
